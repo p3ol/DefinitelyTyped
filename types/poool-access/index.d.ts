@@ -594,7 +594,7 @@ export namespace Poool {
 
         default_widget?: "invisible" | "unlock" | "gift" | "subscription";
         /**
-         * Used to defined a fallback widget in case of error on advertising widgets (`video`, `viewpay`).
+         * Used to defined a fallback widget in case of error on advertising widgets (`video`).
          *
          * Prefer to configure this option in your dashboard (widget edition), especially if your fallback widget requires data (eg: `question` or `form` widgets).
          *
@@ -637,6 +637,28 @@ export namespace Poool {
          * More infos: https://www.poool.dev/docs/access/javascript/audit/installation
          */
         skip_audit_loader?: boolean;
+
+        linkUrl?: string;
+
+        mailchimpListId?: string;
+
+        passId?: string;
+
+        passName?: string;
+
+        sophiEnabled?: boolean;
+
+        sophiContentId?: string;
+
+        sophiPageSection?: string;
+
+        sophiVisitorType?: string;
+
+        customUserId?: string;
+
+        itemId?: string;
+
+        render?: 'next' | 'default';
     }
 
     type EventsList =
