@@ -591,10 +591,9 @@ export namespace Poool {
          *
          * More infos: https://poool.dev/docs/access/javascript/access/configuration
          */
-
         default_widget?: "invisible" | "unlock" | "gift" | "subscription";
         /**
-         * Used to defined a fallback widget in case of error on advertising widgets (`video`, `viewpay`).
+         * Used to defined a fallback widget in case of error on advertising widgets (`video`).
          *
          * Prefer to configure this option in your dashboard (widget edition), especially if your fallback widget requires data (eg: `question` or `form` widgets).
          *
@@ -637,6 +636,79 @@ export namespace Poool {
          * More infos: https://www.poool.dev/docs/access/javascript/audit/installation
          */
         skip_audit_loader?: boolean;
+        /**
+         * Your link URL, link_url will be used on Link action
+         *
+         * Default: `null`
+         *
+         * More infos: https://poool.dev/docs/access/javascript/access/configuration
+         */
+        link_url?: string;
+        /**
+         * Id of the Mailchimp list to which the user's email will be added.
+         * This feature requires activation of the Mailchimp third-party integration in the Dashboard.
+         *
+         * Default: `null`
+         *
+         * More infos: https://poool.dev/docs/access/javascript/access/configuration
+         */
+        mailchimp_list_id?: string;
+        /**
+         * Custom Id of the pass used in Discovery pass action.
+         *
+         * Default: `null`
+         *
+         * More infos: https://poool.dev/docs/access/javascript/access/configuration
+         */
+        pass_id?: string;
+        /**
+         * Custom name of the pass used in Discovery pass action.
+         *
+         * Default: `null`
+         *
+         * More infos: https://poool.dev/docs/access/javascript/access/configuration
+         */
+        pass_name?: string;
+        /**
+         * Enable/disable the Sophi.io third-party integration.
+         *
+         * Default: `false`
+         *
+         * More infos: https://poool.dev/docs/access/javascript/access/configuration
+         */
+        sophi_enabled?: boolean;
+        /**
+         * Page content ID that will be sent to Sophi.io.
+         *
+         * Default: `null`
+         *
+         * More infos: https://poool.dev/docs/access/javascript/access/configuration
+         */
+        sophi_content_id?: string;
+        /**
+         * Page section that will be sent to Sophi.io.
+         *
+         * Default: `null`
+         *
+         * More infos: https://poool.dev/docs/access/javascript/access/configuration
+         */
+        sophi_page_section?: string;
+        /**
+         * Visitor type that will be sent to Sophi.io.
+         *
+         * Default: `null`
+         *
+         * More infos: https://poool.dev/docs/access/javascript/access/configuration
+         */
+        sophi_visitor_type?: string;
+        /**
+         * ⚠️ Legacy render is currently the default render used by Access's SDK and will only get security fixes from now on. The new render is more performant and benefits from new and future features.
+         *
+         * Default: `"legacy"`
+         *
+         * More infos: https://poool.dev/docs/access/javascript/access/configuration
+         */
+        render?: "next" | "legacy";
     }
 
     type EventsList =
